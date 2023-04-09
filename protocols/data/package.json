@@ -1,0 +1,29 @@
+{
+  "name": "@live-assistant/protocols-data",
+  "version": "0.1.0",
+  "description": "Live Assistant Data Protocol",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "repository": "https://github.com/live-assistant/live-assistant-ts",
+  "keywords": [
+    "Streaming"
+  ],
+  "author": "Live Assistant<hello@live-assistant.app>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/live-assistant/live-assistant-ts/issues"
+  },
+  "homepage": "https://github.com/live-assistant/live-assistant-ts#readme",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

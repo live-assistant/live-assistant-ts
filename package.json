@@ -1,0 +1,10 @@
+{
+  "name": "live-assistant-client",
+  "private": true,
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-config-next": "^13.1.6"
+  }
+}
