@@ -166,6 +166,9 @@ export type MediaInfoPayload = {
   trackNumber: number
   artist: string
   genres: string[]
+}
+
+export type MediaPlaybackPayload = {
   status: MediaPlaybackStatus
   repeatMode: MediaPlaybackRepeatMode
   shuffle: boolean
@@ -245,6 +248,7 @@ export type DataTypeToPayloadMap = {
   caption: CaptionPayload
   heartRate: HeartRatePayload
   mediaInfo: MediaInfoPayload
+  mediaPlayback: MediaPlaybackPayload
   inputAudioSpectrum: InputAudioSpectrumPayload
   outputAudioSpectrum: OutputAudioSpectrumPayload
   karaokeStation: KaraokeStationPayload

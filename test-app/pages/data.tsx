@@ -35,6 +35,7 @@ import {
   InputAudioSpectrumPayload,
   OutputAudioSpectrumPayload,
   LiveAssistantClient,
+  MediaPlaybackPayload,
 } from '../../protocols/data/dist'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
@@ -73,9 +74,14 @@ const ClientPage: NextPage = () => {
   ] = useState(0)
 
   const [
-    media,
-    setMedia,
+    mediaInfo,
+    setMediaInfo,
   ] = useState<MediaInfoPayload | undefined>(undefined)
+
+  const [
+    mediaPlayback,
+    setMediaPlayback,
+  ] = useState<MediaPlaybackPayload | undefined>(undefined)
 
   const [
     inputAudio,
@@ -127,7 +133,8 @@ const ClientPage: NextPage = () => {
       m,
     ]),
     heartRate: h => setHeartRate(h.count),
-    mediaInfo: m => setMedia(m),
+    mediaInfo: m => setMediaInfo(m),
+    mediaPlayback: m => setMediaPlayback(m),
     inputAudioSpectrum: a => setInputAudio(a),
     outputAudioSpectrum: a => setOutputAudio(a),
     karaokeStation: k => setKaraoke(k),
@@ -167,8 +174,12 @@ const ClientPage: NextPage = () => {
   return (
     <>
     <img
-      src={media?.cover?.dataUrl}
+      src={mediaInfo?.cover?.dataUrl}
     />
+
+    <p>
+      { JSON.stringify(mediaPlayback) }
+    </p>
 
     <div
       style={{

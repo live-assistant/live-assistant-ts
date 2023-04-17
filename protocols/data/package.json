@@ -1,6 +1,6 @@
 {
   "name": "@live-assistant/protocols-data",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Live Assistant Data Protocol",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
