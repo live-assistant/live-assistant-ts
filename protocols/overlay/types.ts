@@ -56,6 +56,6 @@ export type OverlayProvider = {
   productId: string
   protocolVersion: number
   name: string
-  basePath: string
+  basePath?: string
   overlays: Overlay<string>[]
 }
